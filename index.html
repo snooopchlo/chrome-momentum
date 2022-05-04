@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter&family=Libre+Bodoni&family=Playfair+Display&family=Ubuntu&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>MOMENTUM</title>
+  </head>
+  <body>
+    <section id="shortcut">
+      <div class="google shortcut-icon">
+        <a href="https://www.google.com"
+          ><img class="shortcut-img" src="images/google.png"
+        /></a>
+      </div>
+      <div class="netflix shortcut-icon">
+        <a href="https://www.netflix.com"
+          ><img class="shortcut-img" src="images/netflix.png"
+        /></a>
+      </div>
+      <div class="youtube shortcut-icon">
+        <a href="https://www.youtube.com"
+          ><img class="shortcut-img" src="images/youtube.png"
+        /></a>
+      </div>
+    </section>
+    <!-- input name for the greeting -->
+    <!-- when you click the button the form is going to be submitted -->
+    <form id="login-form" class="hidden">
+      <input
+        type="text"
+        placeholder="What is your name?"
+        required
+        maxlength="15"
+      />
+      <button><i class="fa-duotone fa-square-plus fa-2x"></i></button>
+    </form>
+    <!-- greeting after the input name -->
+    <h1 id="greeting" class="hidden"></h1>
+
+    <div class="container">
+      <div class="main-row row">
+        <!-- left main column -->        
+        <div class="main-col col col-lg-6">
+          <div class="nested-col--top col col-lg-11">
+            <div class="location-container">
+              <i class="fa-solid fa-location-smile fa-lg"></i>
+              <h4 id="location"></h4>
+            </div>
+
+            <h1 id="clock">00:00:00</h1>
+          </div>
+          <div class="nested-col--bottom col col-lg-11">
+            <div id="weather">
+              <img src="" alt="" srcset="" id="weather-icon" />
+              <span id="weather-temp"></span>
+            </div>
+          </div>
+        </div>
+        <!-- right main column -->
+        <div class="main-col-right main-col col col-lg-4">
+          <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+            <!-- To do list tab -->
+            <li class="nav-item left-tab" role="presentation">
+              <button
+                class="nav-link active"
+                id="todo-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#todo"
+                type="button"
+                role="tab"
+                aria-controls="todo"
+                aria-selected="true"
+              >
+                <i class="fa-regular fa-list tab-icon"></i>
+              </button>
+            </li>
+            <!-- memo tab -->
+            <li class="nav-item right-tab" role="presentation">
+              <button
+                class="nav-link"
+                id="calendar-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#calendar"
+                type="button"
+                role="tab"
+                aria-controls="calendar"
+                aria-selected="false"
+              >
+              <i class="fa-regular fa-memo tab-icon"></i></i>
+              </button>
+            </li>
+          </ul>
+          <!-- contents section -->
+          <div class="tab-content" id="myTabContent">
+            <!-- todo list tab -->
+            <div
+              class="tab-pane fade show active"
+              id="todo"
+              role="tabpanel"
+              aria-labelledby="todo-tab"
+            >
+              <!-- input todo list -->
+              <ul class="list-group list-group-flush" id="todo-list"></ul>
+
+              <form id="todo-form">
+                <input class="todo-form-input" type="text" placeholder="Write a To Do and Press Enter" required />
+              </form>
+              
+            
+            </div>
+            <div
+              class="tab-pane fade show active"
+              id="calendar"
+              role="tabpanel"
+              aria-labelledby="calendar-tab"
+            >
+              <h1 id="calendar"></h1>
+            </div>
+          </div>
+          <!-- calendar tab -->
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- quotes -->
+    <div id="quote">
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- button for changing the background -->
+    <div id="change-color-container">
+      <button id="change-colour-btn"><i class="fa-duotone fa-brush fa-lg"></i></button>
+    </div>
+    
+
+    <!-- js components -->
+    <script src="js/clock.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/calendar.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ed08365418.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

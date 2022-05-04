@@ -1,0 +1,50 @@
+.nested-col--top {
+  background: white;
+  border-radius: 1rem;
+  margin: 1.2rem;
+  width: 96%;
+  opacity: 0.95;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.location-container {
+  display: flex;
+  padding-top: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#location {
+  color: grey;
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+#clock {
+  font-size: 5rem;
+  color: black;
+  margin: 0.4rem 0 1rem 0;
+}
+
+.nested-col--bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* weather icon */
+
+#weather-temp {
+  color: white;
+  font-size: 3rem;
+}
+
+#weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
